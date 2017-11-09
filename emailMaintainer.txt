@@ -1,0 +1,7 @@
+From: owner@bugs.debian.org
+To:evo@debian.org
+Dear:Davide Puricelli (evo)
+You have a new bug:
+xchat -RC bug number #=147832
+Please, fix it as son as possible.
+Cheers
