@@ -9,32 +9,6 @@ import java.util.ArrayList;
 public class Servicio {
 
 
-
-    public static void sendEmail(String form) {
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new StringReader(form));
-
-            File mail = new File("emailMaintainer.txt");
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(mail));
-            String linea = bufferedReader.readLine();
-
-            while (linea != null) {
-
-                bufferedWriter.write(linea);
-                linea = bufferedReader.readLine();
-
-                if (linea != null) {
-                    bufferedWriter.newLine();
-                }
-            }
-
-            bufferedWriter.flush();
-            bufferedWriter.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     public static ArrayList SearchMaintainerInfo(String code) {
         String packInfo = "packageMaintainer.txt";
         ArrayList<String> partes = new ArrayList<String>();
@@ -100,6 +74,31 @@ public class Servicio {
         }
 
         return formato;
+    }
+    public static void sendEmail(String form) {
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new StringReader(form));
+
+            File mail = new File("emailMaintainer.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(mail));
+            String linea = bufferedReader.readLine();
+
+            while (linea != null) {
+
+                bufferedWriter.write(linea);
+                linea = bufferedReader.readLine();
+
+                if (linea != null) {
+                    bufferedWriter.newLine();
+                }
+            }
+
+            bufferedWriter.flush();
+            bufferedWriter.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

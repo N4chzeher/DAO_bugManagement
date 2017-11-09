@@ -28,7 +28,7 @@ public class Main {
             String linea = "";             // String donde se guardara el contenido de la linea actual
 
             while ((linea = bufFile1read.readLine()) != null) {      // Mientras haya una linea que leer
-                if (linea.contains(bc)) {                   // Si el String linea contiene la variable de codigo error
+                if (linea.equals(bc)) {                   // Si el String linea contiene la variable de codigo error
                     String[] parts = linea.split(";");    // Se usa Split para partir el array donde encuentre un ;
                     part1 = parts[0];               // Crea 2 subsString con cada parte resultante del Split
                     part2 = parts[1];
